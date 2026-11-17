@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noni Center · Uñas, Maquillaje y Peluquería</title>
+<meta name="description" content="Noni Center – salón de belleza. Uñas, maquillaje y peluquería en un ambiente donde te sientes cómoda y bien atendida. Abierto de 8:00 a 19:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FBF7F3;
+  --sand:#F3EAE3;
+  --blush:#E8D5CC;
+  --nude:#C9A493;
+  --taupe:#8C7266;
+  --ink:#1F1A18;
+  --muted:#6B5E58;
+  --gold:#B08D57;
+  --gold-soft:#D9C29A;
+  --line:rgba(31,26,24,.12);
+  --serif:"Cormorant Garamond", Georgia, serif;
+  --sans:"Jost", system-ui, sans-serif;
+  --wrap:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:400}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1}
+h2{font-size:clamp(2.2rem,4.5vw,3.4rem);font-style:italic}
+.btn{display:inline-flex;align-items:center;gap:.6em;padding:.95em 1.8em;border-radius:999px;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;font-weight:400;transition:.3s ease}
+.btn-dark{background:var(--ink);color:var(--cream)}
+.btn-dark:hover{background:var(--gold)}
+.btn-line{border:1px solid var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--cream)}
+.btn svg{width:18px;height:18px}
+
+/* Cabecera */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.35s ease}
+header.scrolled{background:rgba(251,247,243,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+.logo{display:flex;align-items:center;gap:14px}
+.mono{font-family:var(--serif);font-size:2.1rem;color:var(--gold);letter-spacing:-.04em;line-height:1}
+.mono i{font-style:italic;margin-left:-.12em;color:var(--gold-soft)}
+.logo-text{font-size:.7rem;letter-spacing:.38em;text-transform:uppercase;border-left:1px solid var(--line);padding-left:14px}
+.menu{display:flex;gap:34px;font-size:.88rem;letter-spacing:.06em}
+.menu a{position:relative;padding:4px 0}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:.3s}
+.menu a:hover::after{width:100%}
+.nav .btn{padding:.75em 1.4em}
+@media (max-width:860px){.menu{display:none}.logo-text{display:none}}
+
+/* Portada */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;padding-top:110px;padding-bottom:60px}
+.hero h1{font-size:clamp(3.6rem,9vw,7.4rem);font-style:italic;margin:.25em 0 .2em}
+.hero h1 span{display:block;font-style:normal;font-family:var(--sans);font-weight:300;font-size:.2em;letter-spacing:.55em;text-transform:uppercase;margin-top:.6em;color:var(--taupe)}
+.services-line{font-size:clamp(1rem,1.6vw,1.2rem);letter-spacing:.22em;margin:28px 0 14px}
+.services-line b{color:var(--gold);font-weight:400}
+.hero p.lead{max-width:440px;color:var(--muted);font-size:1.05rem;margin-bottom:38px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+
+/* Arcos decorativos */
+.arches{position:relative;height:min(78vh,640px);display:flex;align-items:flex-end;justify-content:center;gap:18px}
+.arch{position:relative;border-radius:999px 999px 0 0;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)}
+.arch.a1{width:44%;height:100%;background:linear-gradient(180deg,#F1E2DA 0%,#E2C8BC 60%,#CDAE9F 100%)}
+.arch.a2{width:34%;height:76%;background:linear-gradient(180deg,#F6EEE8 0%,#E9DAD1 100%)}
+.arch::before{content:"";position:absolute;inset:14px 14px 0;border-radius:999px 999px 0 0;border:1px solid rgba(255,255,255,.65)}
+.arch .glow{position:absolute;left:50%;top:18%;width:70%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(255,250,240,.95) 0%,rgba(255,250,240,0) 70%)}
+.shelf{position:absolute;left:18%;right:18%;height:2px;background:rgba(255,255,255,.7)}
+.shelf i{position:absolute;bottom:2px;width:7px;height:22px;border-radius:3px 3px 1px 1px}
+.lamp{position:absolute;top:0;width:1px;background:var(--gold);z-index:3}
+.lamp::after{content:"";position:absolute;bottom:-34px;left:-15px;width:31px;height:34px;border-radius:50% 50% 45% 45%;background:radial-gradient(circle at 50% 40%,#fff 0%,#F4EDE4 60%,#E8DCCF 100%);box-shadow:0 10px 40px rgba(255,236,200,.9)}
+.lamp::before{content:"";position:absolute;bottom:-8px;left:-7px;width:15px;height:22px;background:linear-gradient(90deg,#9C7A45,#D9C29A,#9C7A45);border-radius:3px}
+.pampas{position:absolute;bottom:0;left:-6%;width:32%;}
+.badge{position:absolute;right:-4px;bottom:9%;background:var(--cream);padding:16px 22px;border-radius:14px;box-shadow:0 18px 40px rgba(80,50,40,.12);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+.badge strong{display:block;font-family:var(--serif);font-size:1.6rem;letter-spacing:0;text-transform:none;font-weight:500;color:var(--gold)}
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;padding-top:120px;text-align:center}
+  .hero p.lead{margin-left:auto;margin-right:auto}
+  .hero-ctas{justify-content:center}
+  .arches{height:420px}
+  .badge{right:auto;left:50%;transform:translateX(-50%);bottom:-26px;white-space:nowrap}
+  .wa-float{width:52px;height:52px;right:16px;bottom:16px}
+}
+
+/* Animación de entrada */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+/* Secciones */
+section.block{padding:120px 0}
+.head{text-align:center;max-width:620px;margin:0 auto 64px}
+.head h2{margin:.35em 0 .3em}
+.head p{color:var(--muted)}
+.rule{width:56px;height:1px;background:var(--gold);margin:18px auto 0}
+
+/* Servicios */
+#servicios{background:var(--sand)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.card{background:var(--cream);border-radius:999px 999px 18px 18px;padding:70px 34px 44px;text-align:center;transition:.4s ease;position:relative}
+.card:hover{transform:translateY(-8px);box-shadow:0 28px 50px rgba(120,80,60,.12)}
+.card .ico{width:84px;height:84px;margin:0 auto 26px;border-radius:50%;background:var(--blush);display:grid;place-items:center}
+.card .ico svg{width:38px;height:38px;stroke:var(--ink);fill:none;stroke-width:1.2}
+.card h3{font-size:2.1rem;font-style:italic;margin-bottom:12px}
+.card p{color:var(--muted);font-size:.98rem;margin-bottom:22px}
+.card ul{list-style:none;font-size:.85rem;letter-spacing:.08em;border-top:1px solid var(--line)}
+.card li{padding:11px 0;border-bottom:1px solid var(--line)}
+@media (max-width:900px){.cards{grid-template-columns:1fr;max-width:420px;margin:0 auto}}
+
+/* Nosotros */
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+.about-art{position:relative;aspect-ratio:4/5;border-radius:999px 999px 0 0;background:linear-gradient(170deg,#EFE0D7,#D7B9AA);overflow:hidden}
+.about-art::before{content:"";position:absolute;inset:18px 18px 0;border-radius:999px 999px 0 0;border:1px solid rgba(255,255,255,.7)}
+.about-art .chair{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:62%}
+.about-art .quote-mark{position:absolute;top:16%;left:50%;transform:translateX(-50%);font-family:var(--serif);font-size:9rem;line-height:1;color:rgba(255,255,255,.75)}
+.quote{font-family:var(--serif);font-size:clamp(1.7rem,3vw,2.4rem);font-style:italic;line-height:1.3;margin:18px 0 34px}
+.quote::before{content:"\201C";color:var(--gold)}
+.quote::after{content:"\201D";color:var(--gold)}
+.values{display:grid;gap:22px}
+.value{display:flex;gap:20px;align-items:flex-start;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.value span{font-family:var(--serif);font-size:1.6rem;color:var(--gold);min-width:42px}
+.value h3{font-family:var(--sans);font-size:.85rem;letter-spacing:.24em;text-transform:uppercase;font-weight:400;margin-bottom:4px}
+.value p{color:var(--muted);font-size:.97rem}
+@media (max-width:900px){.about{grid-template-columns:1fr;gap:50px}.about-art{max-width:340px;margin:0 auto;width:100%}}
+
+/* Horario y contacto */
+#horario{background:var(--ink);color:var(--cream);text-align:center}
+#horario .eyebrow{color:var(--gold-soft)}
+.hours{font-family:var(--serif);font-size:clamp(3.4rem,10vw,7rem);font-style:italic;margin:.15em 0;color:var(--cream)}
+.hours em{color:var(--gold-soft);font-style:normal;font-size:.5em;vertical-align:middle;margin:0 .4em}
+#horario p{color:rgba(251,247,243,.7);max-width:480px;margin:0 auto}
+.contact{text-align:center}
+.contact .card-wa{max-width:640px;margin:0 auto;background:var(--sand);border-radius:28px;padding:64px 40px}
+.contact h2{margin:.3em 0 .4em}
+.contact p{color:var(--muted);margin-bottom:34px}
+.contact .btn{font-size:.9rem;padding:1.1em 2.2em}
+.note{display:block;margin-top:18px;font-size:.78rem;color:var(--taupe);letter-spacing:.06em}
+
+/* Pie */
+footer{border-top:1px solid var(--line);padding:46px 0;font-size:.82rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer .mono{font-size:1.6rem}
+
+/* Botón flotante WhatsApp */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--ink);color:var(--cream);display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.2);transition:.3s}
+.wa-float:hover{background:var(--gold);transform:scale(1.06)}
+.wa-float svg{width:26px;height:26px}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a href="#inicio" class="logo" aria-label="Noni Center, inicio">
+      <span class="mono">N<i>C</i></span>
+      <span class="logo-text">Noni Center</span>
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#horario">Horario</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-dark" href="#contacto">Reservar</a>
+  </div>
+</header>
+
+<main>
+<section class="wrap hero" id="inicio">
+  <div class="reveal">
+    <p class="eyebrow">Salón de belleza</p>
+    <h1>Noni Center<span>Beauty studio</span></h1>
+    <p class="services-line"><b>U</b>ñas &nbsp;·&nbsp; <b>M</b>aquillaje &nbsp;·&nbsp; <b>P</b>elo</p>
+    <p class="lead">Un lugar tranquilo donde te escuchamos, te cuidamos sin prisas y sales sintiéndote tú, pero mejor.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-dark" href="#contacto" data-wa>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z"/></svg>
+        Pide tu cita
+      </a>
+      <a class="btn btn-line" href="#servicios">Ver servicios</a>
+    </div>
+  </div>
+
+  <div class="arches reveal" aria-hidden="true">
+    <div class="lamp" style="left:38%;height:70px"></div>
+    <div class="lamp" style="left:48%;height:120px"></div>
+    <div class="lamp" style="left:58%;height:90px"></div>
+    <div class="arch a1">
+      <div class="glow"></div>
+      <div class="shelf" style="top:46%"><i style="left:8%;background:#C98B8B"></i><i style="left:22%;background:#E0B4A6"></i><i style="left:36%;background:#9C4E5A"></i><i style="left:50%;background:#EBD3C8"></i><i style="left:64%;background:#B87A6E"></i><i style="left:78%;background:#D9A5A0"></i></div>
+      <div class="shelf" style="top:60%"><i style="left:8%;background:#F0D8D0"></i><i style="left:22%;background:#7E3B47"></i><i style="left:36%;background:#D6A99A"></i><i style="left:50%;background:#C46C6C"></i><i style="left:64%;background:#EDE0D6"></i><i style="left:78%;background:#A55D63"></i></div>
+      <div class="shelf" style="top:74%"><i style="left:8%;background:#B08D57"></i><i style="left:22%;background:#E4C3B8"></i><i style="left:36%;background:#8A4752"></i><i style="left:50%;background:#F2E3DB"></i><i style="left:64%;background:#CF9187"></i><i style="left:78%;background:#E9CFC5"></i></div>
+    </div>
+    <div class="arch a2"><div class="glow" style="top:24%"></div></div>
+    <svg class="pampas" viewBox="0 0 120 220" fill="none">
+      <path d="M48 220c2-50 4-90 0-140M58 220c4-60 14-100 30-150M40 220c-6-50-16-90-34-130" stroke="#B9A08A" stroke-width="1.4"/>
+      <g fill="#E6D3BE" opacity=".9"><ellipse cx="48" cy="60" rx="9" ry="34"/><ellipse cx="90" cy="58" rx="9" ry="32" transform="rotate(22 90 58)"/><ellipse cx="10" cy="80" rx="8" ry="30" transform="rotate(-24 10 80)"/></g>
+      <path d="M38 220h26l-3-34H41z" fill="#F7F1EB" stroke="#E1D4CA"/>
+    </svg>
+    <div class="badge"><strong>8:00 – 19:00</strong>Te esperamos</div>
+  </div>
+</section>
+<section class="block" id="servicios">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Nuestros servicios</p>
+      <h2>Todo lo que necesitas, en un solo lugar</h2>
+      <p>Tres especialidades, un mismo cuidado: tiempo para ti y un resultado que te haga sentir bien.</p>
+      <div class="rule"></div>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="ico"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M14 36V18a6 6 0 0 1 12 0v18"/><path d="M15.5 17.5a4.5 5 0 0 1 9 0v4h-9z"/><path d="M11 36h18"/></svg></div>
+        <h3>Uñas</h3>
+        <p>Manicura y pedicura con calma, colores de temporada y acabados que duran.</p>
+        <ul><li>Manicura</li><li>Pedicura</li><li>Esmaltado semipermanente</li><li>Uñas de gel</li></ul>
+      </article>
+      <article class="card reveal">
+        <div class="ico"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M17 4h6l1 10h-8z"/><rect x="15" y="14" width="10" height="22" rx="2"/><path d="M15 22h10"/></svg></div>
+        <h3>Maquillaje</h3>
+        <p>Desde un look natural para el día a día hasta tu maquillaje para un evento especial.</p>
+        <ul><li>Maquillaje social</li><li>Novias y eventos</li><li>Cejas y pestañas</li><li>Asesoría de maquillaje</li></ul>
+      </article>
+      <article class="card reveal">
+        <div class="ico"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="11" cy="30" r="4.5"/><circle cx="29" cy="30" r="4.5"/><path d="M14 27 30 5M26 27 10 5"/></svg></div>
+        <h3>Pelo</h3>
+        <p>Corte, color y peinado pensados para ti, para tu estilo y tu manera de vivir.</p>
+        <ul><li>Corte y peinado</li><li>Color y mechas</li><li>Tratamientos</li><li>Recogidos</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="nosotros">
+  <div class="wrap about">
+    <div class="about-art reveal" aria-hidden="true">
+      <div class="quote-mark">&ldquo;</div>
+      <svg class="chair" viewBox="0 0 200 220">
+        <path d="M40 120c0-50 20-80 60-80s60 30 60 80v20H40z" fill="#B88E7E"/>
+        <rect x="30" y="134" width="140" height="34" rx="17" fill="#C9A493"/>
+        <path d="M60 168l-10 52M140 168l10 52" stroke="#1F1A18" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Conócenos</p>
+      <p class="quote">Queremos que entres, te sientes y respires. Aquí no hay prisas: estás en tu sitio.</p>
+      <div class="values">
+        <div class="value"><span>01</span><div><h3>Te escuchamos</h3><p>Antes de empezar hablamos contigo: qué quieres, qué te gusta y qué te sienta bien.</p></div></div>
+        <div class="value"><span>02</span><div><h3>Sin prisas</h3><p>Reservamos el tiempo que necesitas para que todo salga como lo imaginas.</p></div></div>
+        <div class="value"><span>03</span><div><h3>Para todas y todos</h3><p>Un ambiente cálido y cercano, donde cualquiera se siente bienvenida y bienvenido.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="block" id="horario">
+  <div class="wrap reveal">
+    <p class="eyebrow">Horario</p>
+    <p class="hours">8:00<em>—</em>19:00</p>
+    <p>Abrimos temprano y cerramos tarde, para que encuentres un hueco antes o después del trabajo.</p>
+  </div>
+</section>
+
+<section class="block contact" id="contacto">
+  <div class="wrap">
+    <div class="card-wa reveal">
+      <p class="eyebrow">Contacto</p>
+      <h2>Escríbenos y te buscamos un hueco</h2>
+      <p>La forma más fácil de pedir cita es por WhatsApp. Cuéntanos qué te apetece y te respondemos lo antes posible.</p>
+      <a class="btn btn-dark" href="#contacto" data-wa>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z"/></svg>
+        Escribir por WhatsApp
+      </a>
+      <span class="note" id="wa-note">Número de WhatsApp pendiente de añadir</span>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="mono">N<i>C</i></span>
+    <span>Noni Center · Uñas · Maquillaje · Pelo</span>
+    <span>Abierto de 8:00 a 19:00</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="#contacto" data-wa aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z"/></svg>
+</a>
+
+<script>
+// Pon aquí el número con prefijo de país, sin espacios ni "+", p. ej. "34612345678"
+const WHATSAPP = "";
+const MENSAJE = "Hola Noni Center, me gustaría pedir una cita.";
+if (WHATSAPP) {
+  document.querySelectorAll("[data-wa]").forEach(a => {
+    a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(MENSAJE);
+    a.target = "_blank"; a.rel = "noopener";
+  });
+  const n = document.getElementById("wa-note"); if (n) n.remove();
+}
+// Cabecera al hacer scroll
+const header = document.getElementById("top");
+const onScroll = () => header.classList.toggle("scrolled", scrollY > 30);
+addEventListener("scroll", onScroll, {passive:true}); onScroll();
+// Aparición suave de las secciones
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+}), {threshold:.15});
+document.querySelectorAll(".reveal").forEach((el,i) => { el.style.transitionDelay = (i%3)*0.12 + "s"; io.observe(el); });
+</script>
+</body>
+</html>
